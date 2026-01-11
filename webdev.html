@@ -44,7 +44,7 @@ nav a {
   flex-wrap: nowrap;
 }
 
-    .streamer-card {
+.streamer-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,24 +74,38 @@ nav a {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 0 30px rgba(127,216,255,0.6);
 }
-    
-    /* SNOW EFFECT */
-    .snow {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        background: url('https://www.animationsoftware7.com/img/agifs/snow02.gif');
-        animation: snow 12s linear infinite;
-        opacity: 0.4;
-    }
 
-    @keyframes snow {
-        from { background-position: 0 0; }
-        to { background-position: 0 1000px; }
-    }
+.streamer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+}
+
+.streamer-wrapper iframe {
+    margin-top: 20px;
+    border-radius: 16px;
+    border: 2px solid rgba(127,216,255,0.4);
+    box-shadow: 0 0 20px rgba(127,216,255,0.3);
+}
+
+/* SNOW EFFECT */
+.snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('https://www.animationsoftware7.com/img/agifs/snow02.gif');
+    animation: snow 12s linear infinite;
+    opacity: 0.4;
+}
+
+@keyframes snow {
+    from { background-position: 0 0; }
+    to { background-position: 0 1000px; }
+}
 </style>
 
 <head>
@@ -104,25 +118,26 @@ nav a {
     <a href="index.html">Home Page</a>
   </nav>
 
-  <div class="snow"></div>  
-  <div class="streamers">
-    <div class="streamer-wrapper">
+    <div class="snow"></div>
+    <div class="streamers">
 
-        <a class="streamer-card" href="https://twitch.tv/tavo_t4vo" target="_blank">
-            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/76a4f74c-5e3e-4e45-9467-ef0ad76153e9-profile_image-300x300.jpeg" alt="tavo_t4vo">
-            <span>Tavo_t4vo</span>
-        </a>
+        <div class="streamer-wrapper">
 
-        <iframe
-            src="https://player.twitch.tv/?channel=tavo_t4vo&parent=fort-leaderboard.com"
-            height="240"
-            width="100%"
-            allowfullscreen>
-        </iframe>
+            <a class="streamer-card" href="https://twitch.tv/tavo_t4vo" target="_blank">
+                <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/76a4f74c-5e3e-4e45-9467-ef0ad76153e9-profile_image-300x300.jpeg" alt="tavo_t4vo">
+                <span>Tavo_t4vo</span>
+            </a>
+
+            <iframe
+                src="https://player.twitch.tv/?channel=tavo_t4vo&parent=fort-leaderboard.com"
+                height="240"
+                width="100%"
+                allowfullscreen>
+            </iframe>
+
+        </div>
 
     </div>
-  </div>
-
+    
 
 </body>
-
